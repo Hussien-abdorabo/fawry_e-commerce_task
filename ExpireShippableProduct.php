@@ -1,15 +1,16 @@
 <?php
+require_once 'shippable.php';
+require_once 'ExpireProduct.php';
 
-class ExpireShippableProduct extends Product implements shippable
+class ExpireShippableProduct extends ExpireProduct implements shippable
 {
-    protected double $weight;
-    public function __construct($name, $price, $quantity,double $weight )
+    protected float $weight;
+    public function __construct($name, $price, $quantity,$expireDate, float $weight )
     {
-        parent::__construct($name, $price, $quantity);
+        parent::__construct($name, $price, $quantity,$expireDate);
         $this->weight = $weight;
     }
-    public function getWeight(): double
-    {
+    public function getWeight(): float {
         return $this->weight;
     }
     public function requiresShipping()

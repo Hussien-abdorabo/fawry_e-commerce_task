@@ -14,7 +14,7 @@ abstract class Product
     }
 
 
-    public function getName()
+    public function getName():string
     {
         return $this->name;
     }

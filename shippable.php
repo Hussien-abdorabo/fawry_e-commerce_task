@@ -1,7 +1,7 @@
 <?php
 interface shippable
 {
-    public function getName(): string;
+    public function getName();
 
-    public function getWeight(): double;
+    public function getWeight():float;
 }
